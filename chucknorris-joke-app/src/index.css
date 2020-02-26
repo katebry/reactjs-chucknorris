@@ -1,12 +1,11 @@
 body {
   margin: 0;
-  font-family: -apple-system, "Trade Winds", BlinkMacSystemFont, Ariel,
-    sans-serif;
+  font-family: -apple-system, "Noto Sans", BlinkMacSystemFont, Ariel, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: Trade Winds, source-code-pro, Menlo, Monaco, Consolas,
+  font-family: Noto Sans, source-code-pro, Menlo, Monaco, Consolas,
     "Courier New", monospace;
 }
