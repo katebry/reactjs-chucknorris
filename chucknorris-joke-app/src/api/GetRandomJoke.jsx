@@ -5,7 +5,8 @@ import { StyledButton } from "../common/styled-features";
 export function GetRandomJoke() {
   const [chuck, setChuck] = useState([""]);
 
-  const url = "http://api.icndb.com/jokes/random?exclude=[explicit]";
+  const url =
+    "http://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript";
 
   const fetchData = async () => {
     const {
@@ -23,7 +24,6 @@ export function GetRandomJoke() {
   return (
     <>
       <h2>{chuck}</h2>
-      <h3>"chuck"</h3>
       <StyledButton onClick={handleClick}>Random Joke</StyledButton>
     </>
   );
