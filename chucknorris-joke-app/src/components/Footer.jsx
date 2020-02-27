@@ -5,17 +5,17 @@ import chuck3 from "../assets/chuck3.png";
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   padding: 20px;
-  padding-top: 100px;
+  padding-top: 20px;
 `;
 
 const R = styled.div`
   display: flex;
-  height: 180px;
-  width: 180px;
+  height: 170px;
+  width: 170px;
   border-radius: 99px;
   border-radius: 50%;
   border: 5px solid #bce3f2;
@@ -35,8 +35,8 @@ const Img = styled.img`
   overflow: hidden;
   position: relative;
   padding: 30px;
-  height: 130px;
-  width: 140px;
+  height: 120px;
+  width: 130px;
 `;
 
 const ImageTagContainer = styled.div`
@@ -52,12 +52,12 @@ const P = styled.p`
 export function Footer() {
   return (
     <Container>
-      <ImageTagContainer>
-        <R>
-          <Img src={chuck3} alt="the face of chuck" />
-        </R>
-        <P>Tell</P>
-      </ImageTagContainer>
+      {/* <ImageTagContainer> */}
+      <R>
+        <Img src={chuck3} alt="the face of chuck" />
+      </R>
+      {/* <P>Tell</P> */}
+      {/* </ImageTagContainer> */}
       <R>
         <Img src={chuck2} alt="the face of chuck" />
       </R>

@@ -6,15 +6,22 @@ import styled from "styled-components";
 import { Footer } from "./Footer";
 
 const ChuckImg = styled.img`
-  grid-column: 2;
-  max-width: 550px;
-  max-height: 370px;
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 30px;
+  vertical-align: top;
+  float: right;
 `;
 
+// justify-content: flex-end;
+// align-items: flex-end;
+// max-height: 450px;
 const Container = styled.div`
-  width: 50%;
-  padding-left: 30px;
-  height: 100%;
+  display: inline-block;
+  padding-left: 15px;
+  vertical-align: top;
+  width: 100%;
+  float: left;
 `;
 
 export function Homepage() {

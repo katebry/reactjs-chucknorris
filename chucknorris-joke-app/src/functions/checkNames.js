@@ -1,3 +1,4 @@
+// CheckNames tests the functionality of the regex
 export const checkNames = name => {
   const whitespaceRegex = /[\s]/g;
   const wordRegex = /[a-zA-z*]/g;

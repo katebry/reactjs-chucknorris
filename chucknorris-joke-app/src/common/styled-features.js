@@ -1,21 +1,11 @@
 import styled from "styled-components";
 
 export const StyledBody = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  padding: 20px;
+  display: flex;
 `;
 
 export const StyledHeader = styled.header`
   width: 100%;
-`;
-
-export const StyledButton = styled.button`
-  grid-column: 1;
-  border-radius: 5px;
-  background: pink;
 `;
 
 export const StyledSearchButton = styled.button`
@@ -41,4 +31,8 @@ export const StyledSearchButton = styled.button`
     transform: translateY(4px);
     box-shadow: 0 3px #666;
   }
+`;
+
+export const StyledButton = styled(StyledSearchButton)`
+  background-color: #036ab9;
 `;

@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
 
+// TODO: code refactor
 export function SearchJoke() {
   const [firstName, setFirstName] = useState("Chuck");
   const [lastName, setLastName] = useState("Norris");
   const [values, setValues] = useState("");
   const [customJoke, setCustomJoke] = useState([""]);
-  const url = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
+  const url = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}&exclude=[explicit]&escape=javascript`;
+
   const whitespaceRegex = /\s/g;
   const wordRegex = /[a-zA-z*]/g;
 
@@ -16,6 +18,7 @@ export function SearchJoke() {
         value: { joke }
       }
     } = await axios.get(url);
+
     setCustomJoke(joke);
   };
 
@@ -26,13 +29,14 @@ export function SearchJoke() {
       setLastName(splitName[1]);
       return;
     } else {
-      return wordRegex.test(values) ? setFirstName(values) : null;
+      // TODO: this doesm't work properly - still returns numbers, need another alternative
+      return wordRegex.test(values) ? setFirstName(values) : "";
     }
   };
 
   function handleClick() {
     checkNames(values);
-    fetchData(firstName, lastName);
+    fetchData();
   }
 
   const onChange = event => {

@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const StyledLogo = styled.img`
   width: 22px;
-  height: 22px;
+  height: 20px;
   padding-top: 5px;
 `;
 
