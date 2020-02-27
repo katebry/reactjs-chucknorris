@@ -9,6 +9,12 @@ const Container = styled.div`
   padding-left: 20px;
 `;
 
+const H1 = styled.h1`
+  color: #002663;
+  font-weight: 900;
+  font-size: 48px;
+`;
+
 const H2 = styled.h2``;
 
 export function GetRandomJoke() {
@@ -32,6 +38,7 @@ export function GetRandomJoke() {
 
   return (
     <Container>
+      <H1>Knock knock, it's Chuck</H1>
       <H2>{chuck}</H2>
       <StyledButton onClick={handleClick}>Random Joke</StyledButton>
     </Container>

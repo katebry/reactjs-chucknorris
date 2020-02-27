@@ -5,7 +5,7 @@ import chuck3 from "../assets/chuck3.png";
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   padding: 20px;
@@ -14,8 +14,8 @@ const Container = styled.div`
 
 const R = styled.div`
   display: flex;
-  height: 170px;
-  width: 170px;
+  height: 100px;
+  width: 100px;
   border-radius: 99px;
   border-radius: 50%;
   border: 5px solid #bce3f2;
@@ -29,14 +29,42 @@ const R = styled.div`
   }
 `;
 
+const I1 = styled(R)`
+  grid-column: 2;
+`;
+
+const I2 = styled(R)`
+  grid-column: 3;
+`;
+
+const I3 = styled(R)`
+  grid-column: 4;
+`;
+
+const I4 = styled(R)`
+  grid-column: 5;
+`;
+
+const I5 = styled(R)`
+  grid-column: 6;
+`;
+
+const I6 = styled(R)`
+  grid-column: 7;
+`;
+
+const I7 = styled(R)`
+  grid-column: 8;
+`;
+
 const Img = styled.img`
   display: flex;
   justify-content: center;
   overflow: hidden;
   position: relative;
-  padding: 30px;
-  height: 120px;
-  width: 130px;
+  padding: 15px;
+  height: 70px;
+  width: 100px;
 `;
 
 const ImageTagContainer = styled.div`
@@ -53,26 +81,33 @@ export function Footer() {
   return (
     <Container>
       {/* <ImageTagContainer> */}
-      <R>
+      <I1>
         <Img src={chuck3} alt="the face of chuck" />
-      </R>
+      </I1>
       {/* <P>Tell</P> */}
       {/* </ImageTagContainer> */}
-      <R>
+      <I2>
         <Img src={chuck2} alt="the face of chuck" />
-      </R>
+      </I2>
       {/* Me */}
-      <R>
+      <I3>
         <Img src={chuck3} alt="the face of chuck" />
-      </R>
+      </I3>
       {/* A */}
-      <R>
+      <I4>
         <Img src={chuck2} alt="the face of chuck" />
-      </R>
+      </I4>
       {/* Funny */}
-      <R>
+      <I5>
         <Img src={chuck3} alt="the face of chuck" />
-      </R>
+      </I5>
+      <I6>
+        <Img src={chuck2} alt="the face of chuck" />
+      </I6>
+      {/* Funny */}
+      <I7>
+        <Img src={chuck3} alt="the face of chuck" />
+      </I7>
       {/* Joke */}
     </Container>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { StyledSearchButton } from "../common/styled-features";
+import { StyledButton } from "../common/styled-features";
 import styled from "styled-components";
 import logo from "../assets/chuck-logo.png";
 import backicon from "../assets/back-icon.png";
@@ -50,10 +50,10 @@ export function Header() {
 
       <SearchBtn>
         <Link to="/search">
-          <StyledSearchButton>
+          <StyledButton>
             Search the joke bank
             <Test src={searchicon} />
-          </StyledSearchButton>
+          </StyledButton>
         </Link>
       </SearchBtn>
     </Container>

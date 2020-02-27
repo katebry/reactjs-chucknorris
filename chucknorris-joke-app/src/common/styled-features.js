@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
   width: 100%;
 `;
 
-export const StyledSearchButton = styled.button`
+export const StyledButton = styled.button`
   background-color: #002663;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
   padding-top: 18px;
@@ -31,8 +31,4 @@ export const StyledSearchButton = styled.button`
     transform: translateY(4px);
     box-shadow: 0 3px #666;
   }
-`;
-
-export const StyledButton = styled(StyledSearchButton)`
-  background-color: #036ab9;
 `;
