@@ -2,11 +2,13 @@ import axios from "axios";
 import React, { useState } from "react";
 
 export function SearchJoke() {
-  const [name, setName] = useState("");
-  const [custom, setCustom] = useState([""]);
-
-  const url = `
-  http://api.icndb.com/jokes/random?firstName=${name}`;
+  const [firstName, setFirstName] = useState("Chuck");
+  const [lastName, setLastName] = useState("Norris");
+  const [values, setValues] = useState("");
+  const [customJoke, setCustomJoke] = useState([""]);
+  const url = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
+  const whitespaceRegex = /\s/g;
+  const wordRegex = /[a-zA-z*]/g;
 
   const fetchData = async () => {
     const {
@@ -14,27 +16,41 @@ export function SearchJoke() {
         value: { joke }
       }
     } = await axios.get(url);
-    setCustom(joke);
+    setCustomJoke(joke);
+  };
+
+  const checkNames = values => {
+    if (whitespaceRegex.test(values)) {
+      const splitName = values.split(" ", 2);
+      setFirstName(splitName[0]);
+      setLastName(splitName[1]);
+      return;
+    } else {
+      return wordRegex.test(values) ? setFirstName(values) : null;
+    }
   };
 
   function handleClick() {
-    fetchData();
+    checkNames(values);
+    fetchData(firstName, lastName);
   }
 
   const onChange = event => {
-    setName(event.target.value);
+    event.preventDefault();
+    setValues(event.target.value);
   };
 
   return (
     <>
+      <label>Who's the real hero of this tale?</label>
       <input
         type="text"
         placeholder="Enter a name..."
-        value={name}
+        value={values}
         onChange={onChange}
       ></input>
       <button onClick={handleClick}>Search</button>
-      <h2>{custom}</h2>
+      <h2>{customJoke}</h2>
     </>
   );
 }

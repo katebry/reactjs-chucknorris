@@ -5,7 +5,7 @@ import chuck3 from "../assets/chuck3.png";
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   padding: 20px;
