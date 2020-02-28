@@ -1,18 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { StyledButton } from "../common/styled-features";
+import { StyledButton, H1 } from "../common/styled-features";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: grid;
   grid-template-rows: (2, 1fr);
   padding-left: 20px;
-`;
-
-const H1 = styled.h1`
-  color: #002663;
-  font-weight: 900;
-  font-size: 48px;
 `;
 
 const H2 = styled.h2``;

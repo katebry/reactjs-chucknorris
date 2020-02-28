@@ -32,3 +32,97 @@ export const StyledButton = styled.button`
     box-shadow: 0 3px #666;
   }
 `;
+
+// Header
+export const HeaderContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 60px;
+  padding: 20px;
+  border-bottom: 4px solid #0494cd;
+`;
+
+export const Logo = styled.img`
+  grid-column: 1 / 3;
+`;
+
+export const BackIconContainer = styled.div`
+  grid-column: 4;
+  padding-top: 15px;
+`;
+
+export const StyledBackIcon = styled.img`
+  width: 22px;
+  height: 20px;
+  padding-top: 5px;
+`;
+
+export const SearchButton = styled.div`
+  grid-column: 5;
+`;
+
+export const SearchIcon = styled.img`
+  padding-left: 20px;
+`;
+
+// Footer
+export const FooterImg = styled.img`
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 15px;
+  height: 70px;
+  width: 100px;
+`;
+
+export const FooterIconsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  padding: 20px;
+  padding-top: 20px;
+`;
+
+export const FooterIconWrapper = styled.div`
+  display: flex;
+  height: 100px;
+  width: 100px;
+  border-radius: 99px;
+  border-radius: 50%;
+  border: 2px solid #bce3f2;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s;
+  z-index: 1;
+
+  :hover {
+    background-color: #bce3f2;
+  }
+`;
+
+// Homepage
+export const ImageContainer = styled.div`
+  display: inline-block;
+  padding-left: 15px;
+  vertical-align: top;
+  width: 100%;
+  float: left;
+`;
+
+export const MainChuckImg = styled.img`
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 30px;
+  vertical-align: top;
+  float: right;
+`;
+
+// API calls
+export const H1 = styled.h1`
+  color: #002663;
+  font-weight: 900;
+  font-size: 48px;
+`;

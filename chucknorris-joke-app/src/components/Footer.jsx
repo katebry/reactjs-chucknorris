@@ -2,113 +2,64 @@ import React from "react";
 import styled from "styled-components";
 import chuck2 from "../assets/chuck2.png";
 import chuck3 from "../assets/chuck3.png";
+import {
+  FooterImg,
+  FooterIconsContainer,
+  FooterIconWrapper
+} from "../common/styled-features";
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 10px;
-  padding: 20px;
-  padding-top: 20px;
-`;
-
-const R = styled.div`
-  display: flex;
-  height: 100px;
-  width: 100px;
-  border-radius: 99px;
-  border-radius: 50%;
-  border: 5px solid #bce3f2;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.25s;
-  z-index: 1;
-
-  :hover {
-    background-color: #bce3f2;
-  }
-`;
-
-const I1 = styled(R)`
+const Image1 = styled(FooterIconWrapper)`
   grid-column: 2;
 `;
 
-const I2 = styled(R)`
+const Image2 = styled(FooterIconWrapper)`
   grid-column: 3;
 `;
 
-const I3 = styled(R)`
+const Image3 = styled(FooterIconWrapper)`
   grid-column: 4;
 `;
 
-const I4 = styled(R)`
+const Image4 = styled(FooterIconWrapper)`
   grid-column: 5;
 `;
 
-const I5 = styled(R)`
+const Image5 = styled(FooterIconWrapper)`
   grid-column: 6;
 `;
 
-const I6 = styled(R)`
+const Image6 = styled(FooterIconWrapper)`
   grid-column: 7;
 `;
 
-const I7 = styled(R)`
+const Image7 = styled(FooterIconWrapper)`
   grid-column: 8;
-`;
-
-const Img = styled.img`
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  padding: 15px;
-  height: 70px;
-  width: 100px;
-`;
-
-const ImageTagContainer = styled.div`
-  display: flex;
-`;
-
-const P = styled.p`
-  color: #002663;
-  font-size: 28px;
-  font-weight: 900;
 `;
 
 export function Footer() {
   return (
-    <Container>
-      {/* <ImageTagContainer> */}
-      <I1>
-        <Img src={chuck3} alt="the face of chuck" />
-      </I1>
-      {/* <P>Tell</P> */}
-      {/* </ImageTagContainer> */}
-      <I2>
-        <Img src={chuck2} alt="the face of chuck" />
-      </I2>
-      {/* Me */}
-      <I3>
-        <Img src={chuck3} alt="the face of chuck" />
-      </I3>
-      {/* A */}
-      <I4>
-        <Img src={chuck2} alt="the face of chuck" />
-      </I4>
-      {/* Funny */}
-      <I5>
-        <Img src={chuck3} alt="the face of chuck" />
-      </I5>
-      <I6>
-        <Img src={chuck2} alt="the face of chuck" />
-      </I6>
-      {/* Funny */}
-      <I7>
-        <Img src={chuck3} alt="the face of chuck" />
-      </I7>
-      {/* Joke */}
-    </Container>
+    <FooterIconsContainer>
+      <Image1>
+        <FooterImg src={chuck3} alt="the face of chuck" />
+      </Image1>
+      <Image2>
+        <FooterImg src={chuck2} alt="the face of chuck" />
+      </Image2>
+      <Image3>
+        <FooterImg src={chuck3} alt="the face of chuck" />
+      </Image3>
+      <Image4>
+        <FooterImg src={chuck2} alt="the face of chuck" />
+      </Image4>
+      <Image5>
+        <FooterImg src={chuck3} alt="the face of chuck" />
+      </Image5>
+      <Image6>
+        <FooterImg src={chuck2} alt="the face of chuck" />
+      </Image6>
+      <Image7>
+        <FooterImg src={chuck3} alt="the face of chuck" />
+      </Image7>
+    </FooterIconsContainer>
   );
 }
