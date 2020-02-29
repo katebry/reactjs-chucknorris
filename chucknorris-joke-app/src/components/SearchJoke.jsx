@@ -4,6 +4,7 @@ import {
   ButtonContainer,
   StyledButton,
   H1,
+  H2,
   StyledInput,
   Wrapper
 } from "../common/styled-features";
@@ -71,7 +72,7 @@ export function SearchJoke() {
         value={values}
         onChange={onChange}
       />
-      <h2>{customJoke}</h2>
+      <H2>{customJoke}</H2>
       <ButtonContainer>
         <StyledButton onClick={handleClick}>Search</StyledButton>
       </ButtonContainer>

@@ -14,6 +14,8 @@ const StyledFooter = styled.div`
   border-top: 4px solid #0494cd;
   min-height: 200px;
   padding: 75px 20px;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
 `;
 
 export function Footer() {

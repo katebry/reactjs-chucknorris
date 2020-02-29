@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Homepage } from "./components/Homepage";
 import { Searchpage } from "./components/Searchpage";
-import { StyledHeader } from "./common/styled-features";
 import { Header } from "./components/Header";
 import { Icons } from "./components/Icons";
 import { Footer } from "./components/Footer";
@@ -10,9 +9,7 @@ import { Footer } from "./components/Footer";
 function App() {
   return (
     <Router>
-      <StyledHeader>
-        <Header />
-      </StyledHeader>
+      <Header />
       <Switch>
         <Route exact path="/">
           <Homepage />

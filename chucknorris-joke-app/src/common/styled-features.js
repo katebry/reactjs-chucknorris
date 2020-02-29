@@ -7,16 +7,18 @@ export const StyledBody = styled.div`
   grid-column-gap: 40px;
   padding-left: 40px;
   padding-right: 40px;
+  @media screen and (max-width: 730px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: (2, 1fr);
   padding-left: 20px;
-`;
-
-export const StyledHeader = styled.header`
-  width: 100%;
+  @media screen and (max-width: 730px) {
+    display: ;
+  }
 `;
 
 export const StyledButton = styled.button`
@@ -47,21 +49,31 @@ export const StyledButton = styled.button`
 // Header
 export const HeaderContainer = styled.div`
   display: grid;
-  grid-template-columns: 3fr, 1fr, 2fr, 2fr);
+  grid-template-columns: 3fr, 1fr, 2fr, 2fr;
   grid-template-rows: 1fr;
   grid-column-gap: 60px;
   padding: 20px;
   padding-left: 30px;
   border-bottom: 4px solid #0494cd;
+  @media screen and (max-width: 1040px) {
+    grid-column-gap: 5px;
+  }
 `;
 
 export const Logo = styled.img`
   grid-column: 1 / 3;
+  @media screen and (max-width: 850px) {
+    padding-top: 10px;
+    max-width: 300px;
+  }
 `;
 
 export const BackIconContainer = styled.div`
   grid-column: 4;
   padding-top: 15px;
+  @media screen and (max-width: 1174px) {
+    display: none;
+  }
 `;
 
 export const StyledBackIcon = styled.img`
@@ -113,6 +125,10 @@ export const FooterIconWrapper = styled.div`
   :hover {
     background-color: #bce3f2;
   }
+
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
 `;
 
 // Homepage
@@ -130,6 +146,15 @@ export const MainChuckImg = styled.img`
   padding-right: 30px;
   vertical-align: top;
   float: right;
+  @media screen and (max-width: 1250px) {
+    width: 500px;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 350px;
+  }
+  @media screen and (max-width: 730px) {
+    display: none;
+  }
 `;
 
 // API calls
@@ -137,6 +162,15 @@ export const H1 = styled.h1`
   color: #002663;
   font-weight: 900;
   font-size: 48px;
+  @media screen and (max-width: 1100px) {
+    font-size: 28px;
+  }
+`;
+
+export const H2 = styled.h2`
+  @media screen and (max-width: 1100px) {
+    font-size: 22px;
+  }
 `;
 
 export const StyledInput = styled.input`
@@ -145,14 +179,21 @@ export const StyledInput = styled.input`
   padding: 15px;
   height: 10px;
   font-size: 16px;
+  @media screen and (max-width: 850px) {
+    max-width: 300px;
+  }
 
-:focus {
+  :focus {
   cursor: text;
   outline: none;
+
   `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 850px) {
+    max-width: 200px;
+  }
 `;

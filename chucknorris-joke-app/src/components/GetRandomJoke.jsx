@@ -3,12 +3,11 @@ import React, { useState } from "react";
 import {
   StyledButton,
   H1,
+  H2,
   Wrapper,
   ButtonContainer
 } from "../common/styled-features";
 import styled from "styled-components";
-
-const H2 = styled.h2``;
 
 export function GetRandomJoke() {
   const [chuck, setChuck] = useState([""]);
