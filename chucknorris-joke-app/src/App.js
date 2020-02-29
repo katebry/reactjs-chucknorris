@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Homepage } from "./components/Homepage";
-import { SearchJoke } from "./api/SearchJoke";
+import { Searchpage } from "./components/Searchpage";
 import { StyledHeader } from "./common/styled-features";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -17,7 +17,7 @@ function App() {
           <Homepage />
         </Route>
         <Route path="/search">
-          <SearchJoke />
+          <Searchpage />
         </Route>
       </Switch>
       <Footer />

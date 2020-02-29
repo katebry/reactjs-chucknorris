@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import chuck2 from "../assets/chuck2.png";
-import chuck3 from "../assets/chuck3.png";
+import chuck2 from "../common/assets/chuck2.png";
+import chuck3 from "../common/assets/chuck3.png";
 import {
   FooterImg,
   FooterIconsContainer,

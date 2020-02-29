@@ -1,7 +1,18 @@
 import styled from "styled-components";
 
 export const StyledBody = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+`;
+
+export const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  padding-left: 20px;
 `;
 
 export const StyledHeader = styled.header`
@@ -40,6 +51,7 @@ export const HeaderContainer = styled.div`
   grid-template-rows: 1fr;
   grid-column-gap: 60px;
   padding: 20px;
+  padding-left: 30px;
   border-bottom: 4px solid #0494cd;
 `;
 
@@ -126,3 +138,15 @@ export const H1 = styled.h1`
   font-weight: 900;
   font-size: 48px;
 `;
+
+export const StyledInput = styled.input`
+  border: 2px solid #002663;
+  border-radius: 6px;
+  padding: 15px;
+  height: 10px;
+  font-size: 16px;
+
+:focus {
+  cursor: text;
+  outline: none;
+  `;

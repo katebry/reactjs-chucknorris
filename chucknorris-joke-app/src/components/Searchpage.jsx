@@ -4,17 +4,17 @@ import {
   ImageContainer,
   MainChuckImg
 } from "../common/styled-features";
-import { GetRandomJoke } from "./GetRandomJoke";
-import chuckimage from "../common/assets/chuck-image.png";
+import { SearchJoke } from "./SearchJoke";
+import chuckimage from "../common/assets/chucknorrisgame.jpg";
 
-export function Homepage() {
+export function Searchpage() {
   return (
     <StyledBody>
-      <GetRandomJoke />
+      <SearchJoke />
       <ImageContainer>
         <MainChuckImg
           src={chuckimage}
-          alt="collage of Chuck Norris images through the ages"
+          alt="A still from a Chuck Norris game, featuring the figure of Chuck within the game"
         />
       </ImageContainer>
     </StyledBody>

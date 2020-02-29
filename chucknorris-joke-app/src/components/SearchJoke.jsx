@@ -1,5 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import {
+  StyledButton,
+  H1,
+  StyledInput,
+  Wrapper
+} from "../common/styled-features";
 
 // TODO: code refactor
 export function SearchJoke() {
@@ -29,7 +35,7 @@ export function SearchJoke() {
       setLastName(splitName[1]);
       return;
     } else {
-      // TODO: this doesm't work properly - still returns numbers, need another alternative
+      // TODO: this still returns numbers, need another alternative
       return wordRegex.test(values) ? setFirstName(values) : "";
     }
   };
@@ -45,16 +51,18 @@ export function SearchJoke() {
   };
 
   return (
-    <>
-      <label>Who's the real hero of this tale?</label>
-      <input
+    <Wrapper>
+      <H1>
+        Who's there? It's {firstName} {lastName}
+      </H1>
+      <StyledInput
         type="text"
-        placeholder="Enter a name..."
+        placeholder="Enter your name..."
         value={values}
         onChange={onChange}
-      ></input>
-      <button onClick={handleClick}>Search</button>
+      />
       <h2>{customJoke}</h2>
-    </>
+      <StyledButton onClick={handleClick}>Search</StyledButton>
+    </Wrapper>
   );
 }
