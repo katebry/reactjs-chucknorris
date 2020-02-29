@@ -7,7 +7,6 @@ import {
   Wrapper,
   ButtonContainer
 } from "../common/styled-features";
-import styled from "styled-components";
 
 export function GetRandomJoke() {
   const [chuck, setChuck] = useState([""]);
