@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import {
+  ButtonContainer,
   StyledButton,
   H1,
   StyledInput,
@@ -59,7 +60,7 @@ export function SearchJoke() {
     <Wrapper>
       {firstName !== "Chuck" ? (
         <SmallH1>
-          It can be your game too, {firstName} {lastName}
+          Or is it {firstName} {lastName} at the door?
         </SmallH1>
       ) : (
         <H1> Who's there? It's {firstName}</H1>
@@ -71,7 +72,9 @@ export function SearchJoke() {
         onChange={onChange}
       />
       <h2>{customJoke}</h2>
-      <StyledButton onClick={handleClick}>Search</StyledButton>
+      <ButtonContainer>
+        <StyledButton onClick={handleClick}>Search</StyledButton>
+      </ButtonContainer>
     </Wrapper>
   );
 }

@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { StyledButton, H1, Wrapper } from "../common/styled-features";
+import {
+  StyledButton,
+  H1,
+  Wrapper,
+  ButtonContainer
+} from "../common/styled-features";
 import styled from "styled-components";
-
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 const H2 = styled.h2``;
 

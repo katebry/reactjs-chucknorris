@@ -5,7 +5,7 @@ import {
   MainChuckImg
 } from "../common/styled-features";
 import { SearchJoke } from "./SearchJoke";
-import chuckimage from "../common/assets/chucknorrisgame.jpg";
+import chuckimage from "../common/assets/chuck-game.jpg";
 
 export function Searchpage() {
   return (

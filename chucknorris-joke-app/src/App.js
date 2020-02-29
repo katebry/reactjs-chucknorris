@@ -4,6 +4,7 @@ import { Homepage } from "./components/Homepage";
 import { Searchpage } from "./components/Searchpage";
 import { StyledHeader } from "./common/styled-features";
 import { Header } from "./components/Header";
+import { Icons } from "./components/Icons";
 import { Footer } from "./components/Footer";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Searchpage />
         </Route>
       </Switch>
+      <Icons />
       <Footer />
     </Router>
   );

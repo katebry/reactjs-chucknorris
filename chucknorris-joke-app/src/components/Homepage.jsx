@@ -5,7 +5,7 @@ import {
   MainChuckImg
 } from "../common/styled-features";
 import { GetRandomJoke } from "./GetRandomJoke";
-import chuckimage from "../common/assets/chuck-image.png";
+import chuckimage from "../common/assets/chuck-image.jpg";
 
 export function Homepage() {
   return (

@@ -47,7 +47,7 @@ export const StyledButton = styled.button`
 // Header
 export const HeaderContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 3fr, 1fr, 2fr, 2fr);
   grid-template-rows: 1fr;
   grid-column-gap: 60px;
   padding: 20px;
@@ -67,7 +67,7 @@ export const BackIconContainer = styled.div`
 export const StyledBackIcon = styled.img`
   width: 22px;
   height: 20px;
-  padding-top: 5px;
+  padding-top: 8px;
 `;
 
 export const SearchButton = styled.div`
@@ -95,7 +95,7 @@ export const FooterIconsContainer = styled.div`
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   padding: 20px;
-  padding-top: 20px;
+  padding-top: 50px;
 `;
 
 export const FooterIconWrapper = styled.div`
@@ -150,3 +150,9 @@ export const StyledInput = styled.input`
   cursor: text;
   outline: none;
   `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
