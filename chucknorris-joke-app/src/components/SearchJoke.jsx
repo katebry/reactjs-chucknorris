@@ -6,6 +6,11 @@ import {
   StyledInput,
   Wrapper
 } from "../common/styled-features";
+import styled from "styled-components";
+
+const SmallH1 = styled(H1)`
+  font-size: 40px;
+`;
 
 // TODO: code refactor
 export function SearchJoke() {
@@ -52,9 +57,13 @@ export function SearchJoke() {
 
   return (
     <Wrapper>
-      <H1>
-        Who's there? It's {firstName} {lastName}
-      </H1>
+      {firstName !== "Chuck" ? (
+        <SmallH1>
+          It can be your game too, {firstName} {lastName}
+        </SmallH1>
+      ) : (
+        <H1> Who's there? It's {firstName}</H1>
+      )}
       <StyledInput
         type="text"
         placeholder="Enter your name..."
