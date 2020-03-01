@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   HeaderSearchButton,
@@ -7,24 +7,15 @@ import {
   BackIconContainer,
   SearchIcon,
   HeaderContainer,
-  Logo,
-  MobileStyledButton
+  Logo
 } from "../common/styled-features";
 import logo from "../common/assets/chuck-logo.png";
 import backicon from "../common/assets/back-icon.png";
 import searchicon from "../common/assets/search-icon.png";
 
 export function Header() {
-  const [windowSize, setWindowSize] = useState(window.innerWidth > 650);
-
-  useEffect(() => {
-    window.addEventListener("resize", setWindowSize);
-    return () => window.removeEventListener("resize", setWindowSize);
-  }, []);
-
   return (
     <HeaderContainer>
-      {/* {console.log(windowSize.target.innerScreen)} */}
       <Link to="/">
         <Logo src={logo} alt="The Chuck-Norris Joke Bank Logo" />
       </Link>
@@ -34,14 +25,10 @@ export function Header() {
       </BackIconContainer>
       <SearchButton>
         <Link to="/search">
-          {windowSize ? (
-            <HeaderSearchButton>
-              Search the joke bank
-              <SearchIcon src={searchicon} />
-            </HeaderSearchButton>
-          ) : (
-            <MobileStyledButton>Search</MobileStyledButton>
-          )}
+          <HeaderSearchButton>
+            Search the joke bank
+            <SearchIcon src={searchicon} />
+          </HeaderSearchButton>
         </Link>
       </SearchButton>
     </HeaderContainer>
