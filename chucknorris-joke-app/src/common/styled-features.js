@@ -15,14 +15,14 @@ export const StyledBody = styled.div`
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: (2, 1fr);
-  padding-left: 20px;
+  padding-left: ${props => props.theme.padding.standard};
   @media screen and (max-width: 730px) {
     display: ;
   }
 `;
 
 export const StyledButton = styled.button`
-  background-color: #002663;
+  background-color: ${props => props.theme.colors.darkBlue};
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
   padding-top: 18px;
   padding-bottom: 18px;
@@ -40,9 +40,9 @@ export const StyledButton = styled.button`
   outline: none;
 
   :active {
-    background-color: #046ab8;
+    background-color: ${props => props.theme.colors.lighterBlue};
     transform: translateY(4px);
-    box-shadow: 0 3px #666;
+    box-shadow: 0 3px ${props => props.theme.colors.grey};
   }
 `;
 
@@ -55,7 +55,7 @@ export const HeaderSearchButton = styled(StyledButton)`
 export const MobileStyledButton = styled.button`
   @media screen and (max-width: 650px) {
     width: 80px;
-    background-color: #002663;
+    background-color: ${props => props.theme.colors.darkBlue};
     height: 50px;
     border: none;
     border-radius: 999px;
@@ -72,7 +72,7 @@ export const HeaderContainer = styled.div`
   grid-template-columns: 3fr, 1fr, 2fr, 2fr;
   grid-template-rows: 1fr;
   grid-column-gap: 60px;
-  padding: 20px;
+  padding: ${props => props.theme.padding.standard};
   padding-left: 30px;
   border-bottom: 4px solid #0494cd;
   @media screen and (max-width: 1040px) {
@@ -108,7 +108,7 @@ export const SearchButton = styled.div`
 `;
 
 export const SearchIcon = styled.img`
-  padding-left: 20px;
+  padding-left: ${props => props.theme.padding.standard};
 `;
 
 // Footer
@@ -127,7 +127,7 @@ export const FooterIconsContainer = styled.div`
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
-  padding: 20px;
+  padding: ${props => props.theme.padding.standard};
   padding-top: 50px;
 `;
 
@@ -137,14 +137,14 @@ export const FooterIconWrapper = styled.div`
   width: 100px;
   border-radius: 99px;
   border-radius: 50%;
-  border: 2px solid #bce3f2;
+  border: 2px solid ${props => props.theme.colors.lightestBlue};
   align-items: center;
   justify-content: center;
   transition: opacity 0.25s;
   z-index: 1;
 
   :hover {
-    background-color: #bce3f2;
+    background-color: ${props => props.theme.colors.lightestBlue};
   }
 
   @media screen and (max-width: 850px) {
@@ -180,7 +180,7 @@ export const MainChuckImg = styled.img`
 
 // API calls
 export const H1 = styled.h1`
-  color: #002663;
+  color: ${props => props.theme.colors.darkBlue};
   font-weight: 900;
   font-size: 48px;
   @media screen and (max-width: 1100px) {
@@ -195,7 +195,7 @@ export const H2 = styled.h2`
 `;
 
 export const StyledInput = styled.input`
-  border: 2px solid #002663;
+  border: 2px solid ${props => props.theme.colors.darkBlue};
   border-radius: 6px;
   padding: 15px;
   height: 10px;
