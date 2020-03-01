@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ButtonContainer,
   StyledButton,
@@ -25,15 +25,11 @@ export function SearchJoke() {
   const whitespaceRegex = /\s/g;
   const wordRegex = /[a-zA-z*]/g;
 
-  const fetchData = async () => {
-    const {
-      data: {
-        value: { joke }
-      }
-    } = await axios.get(url);
-
-    setCustomJoke(joke);
-  };
+  useEffect(() => {
+    axios.get(url).then(response => {
+      setCustomJoke(response.data.value.joke);
+    });
+  }, [url]);
 
   const checkNames = values => {
     if (whitespaceRegex.test(values)) {
@@ -49,7 +45,6 @@ export function SearchJoke() {
 
   function handleClick() {
     checkNames(values);
-    fetchData();
   }
 
   const onChange = event => {

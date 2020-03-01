@@ -46,6 +46,26 @@ export const StyledButton = styled.button`
   }
 `;
 
+export const HeaderSearchButton = styled(StyledButton)`
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+`;
+
+export const MobileStyledButton = styled.button`
+  @media screen and (max-width: 650px) {
+    width: 80px;
+    background-color: #002663;
+    height: 50px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+  }
+`;
+
 // Header
 export const HeaderContainer = styled.div`
   display: grid;
@@ -62,6 +82,7 @@ export const HeaderContainer = styled.div`
 
 export const Logo = styled.img`
   grid-column: 1 / 3;
+  cursor: pointer;
   @media screen and (max-width: 850px) {
     padding-top: 10px;
     max-width: 300px;
