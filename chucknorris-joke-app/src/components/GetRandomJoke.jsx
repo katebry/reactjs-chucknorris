@@ -15,12 +15,16 @@ export function GetRandomJoke() {
     "http://api.icndb.com/jokes/random?exclude=[explicit]&escape=javascript";
 
   const fetchData = async () => {
-    const {
-      data: {
-        value: { joke }
-      }
-    } = await axios.get(url);
-    setChuck(joke);
+    try {
+      const {
+        data: {
+          value: { joke }
+        }
+      } = await axios.get(url);
+      setChuck(joke);
+    } catch (err) {
+      console.log("error from fetchData func", err);
+    }
   };
 
   const handleClick = () => {
